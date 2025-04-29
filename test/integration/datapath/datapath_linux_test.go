@@ -218,7 +218,7 @@ func TestDatapathLinux(t *testing.T) {
 				Namespace:     *podNamespace,
 				LabelSelector: podLabelSelector,
 				LocalPort:     9090,
-				DestPort:      8080,
+				DestPort:      8081,
 			}
 
 			pf, err := k8s.NewPortForwarder(restConfig, pfOpts)

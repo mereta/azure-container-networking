@@ -42,7 +42,7 @@ spec:
             - name: HOST
               value: "0.0.0.0"
             - name: PORT
-              value: "8080"
+              value: "8081"
             - name: PING_TIMEOUT
               value: "10s"
             - name: CHECK_TIMEOUT
@@ -64,17 +64,17 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
               name: http
           readinessProbe:
             httpGet:
               path: /healthz
-              port: 8080
+              port: 8081
             initialDelaySeconds: 5
             periodSeconds: 5
           livenessProbe:
             httpGet:
               path: /healthz
-              port: 8080
+              port: 8081
             initialDelaySeconds: 5
             periodSeconds: 5

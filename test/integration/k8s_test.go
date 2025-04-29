@@ -170,7 +170,7 @@ func TestPodScaling(t *testing.T) {
 				Namespace:     "default",
 				LabelSelector: "type=goldpinger-pod",
 				LocalPort:     9090,
-				DestPort:      8080,
+				DestPort:      8081,
 			}
 
 			pingCheckFn := func() error {
